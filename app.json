@@ -1,4 +1,6 @@
 {
+  "name": "jobsfee",
+  "displayName": "jobsfee",
   "expo": {
     "sdkVersion": "27.0.0"
   }
