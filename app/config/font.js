@@ -13,6 +13,7 @@ class AppFontLoader extends Component {
             await Font.loadAsync({
                 FontAwesome,
                 'Material Icons' : MaterialIcons,
+                MaterialIcons,
                 Roboto
             });
             this.setState({ fontLoaded: true });
