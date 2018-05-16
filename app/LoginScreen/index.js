@@ -19,8 +19,8 @@ import {
     render() {
       return <View style = { styles.MainContainer }>
             <Text style = { styles.textStyle }>Login Screen</Text>
-            <Button onPress={()=>{this.login()}}><Text>Login</Text></Button>
-            <Button onPress={()=>{this.register()}}><Text>Register</Text></Button>
+            <Button title='Login' onPress={()=>{this.login()}}></Button>
+            <Button title='Register' onPress={()=>{this.register()}} />;
             
       </View>
     }
