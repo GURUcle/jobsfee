@@ -6,6 +6,8 @@ import {
   StatusBar,
   View
 } from 'react-native';
+import { Icon } from 'react-native-material-ui';
+
 
 export default function(text){
   return class extends Component {
@@ -16,9 +18,8 @@ export default function(text){
     render() {
       return (
         <View style={styles.container}>
-            <Text style={styles.welcome}>
-            Here View : {text.toUpperCase()}
-            </Text>
+            <Icon name={text} size={54} />
+            <Text>{text.toUpperCase()}</Text>
           </View>
       );
     }
