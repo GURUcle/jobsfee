@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { View, Text } from 'react-native';
+import { TabRouter } from 'react-navigation';
+
+import BlankView from '../BlankView';
 import Container from '../Container';
 
 import { Toolbar, BottomNavigation, Icon, COLOR, ThemeProvider } from 'react-native-material-ui';
@@ -13,6 +16,38 @@ const uiTheme = {
   },
 };
 
+const TabRoute = TabRouter({
+  "view-list": { screen: BlankView("view-list") },
+  "chat": { screen: BlankView("chat") },
+  "send": { screen: BlankView("send") },
+  "settings": {screen: BlankView("settings")}
+  }, {
+    initialRouteName: 'view-list',
+  }
+);
+
+class TabContentNavigator extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      active: props.value.active,
+    };
+  }
+
+  //this method will not get called first time
+  componentWillReceiveProps(newProps){
+    this.setState({
+      active: newProps.value.active,
+    }); 
+  }
+
+  render() {
+    const Component = TabRoute.getComponentForRouteName(this.state.active);
+    return <Component/>;
+  }
+}
+
+
 export default class  extends Component {
     constructor(props) {
         super(props);
@@ -23,9 +58,7 @@ export default class  extends Component {
     render() {
         return <ThemeProvider uiTheme={uiTheme}>
             <Container>
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                    <Icon name={this.state.active} size={54} />
-                </View>
+                <TabContentNavigator value={this.state} key={this.state} />
                 <BottomNavigation active={this.state.active} >
                     <BottomNavigation.Action
                         key="view-list"
