@@ -11,9 +11,4 @@ export default class App extends React.Component {
     </AppFontLoader>;
   }
 }
-// export default createStackNavigator({
-//     Home: { screen: App },
-//     Chat: { screen: BlankView("chat") }
-// }, {
-//   headerMode: 'none',
-// })
+
