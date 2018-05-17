@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { Button, ThemeProvider } from 'react-native-material-ui';
 import {
     View,
     Text,
-    Button,
     StyleSheet
   } from 'react-native';
 
@@ -17,12 +17,13 @@ import {
         this.props.navigation.navigate('Register');
     }
     render() {
-      return <View style = { styles.MainContainer }>
-            <Text style = { styles.textStyle }>Login Screen</Text>
-            <Button title='Login' onPress={()=>{this.login()}}></Button>
-            <Button title='Register' onPress={()=>{this.register()}} />;
-            
-      </View>
+      return <ThemeProvider uiTheme={global.uiTheme}>
+            <View style = { styles.MainContainer }>
+                <Text style = { styles.textStyle }>Login Screen</Text>
+                <Button primary text='Login' onPress={()=>{this.login()}}/>
+                <Button accent text='Register' onPress={()=>{this.register()}} />;    
+            </View>
+        </ThemeProvider>
     }
   }
   const styles = StyleSheet.create(

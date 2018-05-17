@@ -1,4 +1,13 @@
 import React from 'react';
+import {COLOR} from 'react-native-material-ui';
+
+global.uiTheme = {
+  palette: {
+      primaryColor: COLOR.green500,
+      accentColor: COLOR.pink500,
+  },
+};
+
 import { createStackNavigator } from 'react-navigation';
 import Home from "./HomeScreen";
 import Login from "./LoginScreen";

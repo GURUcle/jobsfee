@@ -6,15 +6,10 @@ import TabNavigator, { initView } from './TabNavigator';
 
 import Container from '../Container';
 
-import { Toolbar, BottomNavigation, COLOR, ThemeProvider } from 'react-native-material-ui';
+import { Toolbar, BottomNavigation, ThemeProvider } from 'react-native-material-ui';
 export {AppFontLoader} from './font';
 
-const uiTheme = {
-  palette: {
-      primaryColor: COLOR.green500,
-      accentColor: COLOR.pink500,
-  },
-};
+
 
 
 export default class  extends Component {
@@ -24,7 +19,7 @@ export default class  extends Component {
     }
     componentWillUpdate
     render() {
-        return <ThemeProvider uiTheme={uiTheme}>
+        return <ThemeProvider uiTheme={global.uiTheme}>
             <Container>
                 <TabNavigator value={this.state} key={this.state} />
                 <BottomNavigation active={this.state.active} >
