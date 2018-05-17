@@ -18,6 +18,15 @@ global.styles = StyleSheet.create(
       margin: 10
     
    },
+   TextInputStyleClass: {
+ 
+    textAlign: 'center',
+    marginBottom: 7,
+    height: 40,
+    borderWidth: 1,
+    borderColor: '#2196F3',
+    borderRadius: 5 ,
+  },
    textStyle: {
       fontSize: 22,
       margin: 5,        
