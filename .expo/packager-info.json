@@ -1,8 +1,8 @@
 {
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 69927,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 29399,
+  "expoServerNgrokUrl": "https://fv-tt3.oshimin.jobsfee.exp.direct",
+  "packagerNgrokUrl": "https://packager.fv-tt3.oshimin.jobsfee.exp.direct",
+  "ngrokPid": 29421
 }

@@ -1,24 +1,50 @@
 import React from 'react';
 import {COLOR} from 'react-native-material-ui';
+import {StyleSheet} from 'react-native';
+import { createSwitchNavigator,NavigationActions } from 'react-navigation';
 
+global.auth = true; 
 global.uiTheme = {
   palette: {
       primaryColor: COLOR.green500,
       accentColor: COLOR.pink500,
   },
 };
-
-import { createStackNavigator } from 'react-navigation';
-import Home from "./HomeScreen";
+global.styles = StyleSheet.create(
+  {
+   MainContainer: {
+      justifyContent: 'center',
+      flex:1,
+      margin: 10
+    
+   },
+   textStyle: {
+      fontSize: 22,
+      margin: 5,        
+      textAlign: 'center',
+      color: '#000',
+   },
+   SmallTextStyle: {
+      fontSize: 15,
+      margin: 5,        
+      textAlign: 'center',
+      color: '#000',
+   },
+   
+  });
+import AppStack from "./AppStack";
+import Splash from "./SplashScreen";
 import Login from "./LoginScreen";
 import Register from "./RegisterScreen";
 
 
-const TopLevelNav = createStackNavigator({
+const TopLevelNav = createSwitchNavigator({
+  Splash: { screen: Splash },
   Login: { screen: Login },
   Register: { screen: Register },
-  Main: { screen: Home },
+  Main: { screen: AppStack },
 }, {
+  initialRouteName: 'Splash',
   headerMode: 'none',
   transitionConfig: () => ({
       screenInterpolator: (props) => { 
