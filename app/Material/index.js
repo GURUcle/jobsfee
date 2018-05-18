@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import { ThemeProvider } from 'react-native-material-ui';
 import { Icon } from 'react-native-material-ui';
-// import firebase from 'react-native-firebase';
+//import firebase from 'react-native-firebase';
 
 class Material extends Component {
   constructor(props, context) {
