@@ -4,8 +4,10 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Toolbar, BottomNavigation } from 'react-native-material-ui';
 import Material from '../Material';
 import FontLoader from '../FontLoader';
-import BlankView from '../Material';
-
+import JobListTab from '../JobListTab';
+import MessagesTab from '../MessagesTab';
+import OffersTab from '../OffersTab';
+import SettingsTab from '../SettingsTab';
 
 const initView = 'view-list';
 
@@ -16,10 +18,10 @@ const styles = StyleSheet.create({
 });
 
 const TabRoute = TabRouter({
-    "view-list": { screen: BlankView },
-    "chat": { screen: BlankView },
-    "send": { screen: BlankView },
-    "settings": {screen: BlankView}
+    "view-list": { screen: JobListTab },
+    "chat": { screen: MessagesTab },
+    "send": { screen: OffersTab },
+    "settings": {screen: SettingsTab}
     }, {
       initialRouteName: initView,
     }
