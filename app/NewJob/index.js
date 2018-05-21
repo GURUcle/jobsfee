@@ -33,16 +33,19 @@ export default class  extends Component {
         onChangeText={value=>{this.setState({title:value})}}
       />
       <RNPickerSelect
-                    items={global.jobs}
-                    placeholder={{}}
-                    onValueChange={(value) => {
-                        this.setState({
-                            jobs: value,
-                        });
-                    }}
-                >
-                    
-                </RNPickerSelect>
+        style={{
+          marginTop :10
+        }}
+        items={global.jobs}
+        placeholder={{}}
+        onValueChange={(value) => {
+            this.setState({
+                jobs: value,
+            });
+        }}
+      >
+          
+      </RNPickerSelect>
     </MaterialPage>;
   }
 }
