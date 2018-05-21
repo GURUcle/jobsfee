@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import Material from '../Material';
+import Material from '../MaterialView';
+import NavBar from '../NavBar';
+
 import { Button, ThemeProvider} from 'react-native-material-ui';
 import {
     View,
     Text,
     StyleSheet
   } from 'react-native';
-
+  import { NavigationBar,Title } from '@shoutem/ui';
   export default class  extends Component {
     constructor(props) {
         super(props)        
@@ -16,8 +18,11 @@ import {
     }
     render() {
       return <Material>
-        <View style = { global.styles.MainContainer }>
-              <Text style = { global.styles.textStyle }>Message Tab Screen</Text>
+        <View style={global.styles.TabContainer}>
+          <NavBar
+            title="Messages"
+            image={require('../../Images/image-6.png')}
+          />
         </View>
       </Material>
     }

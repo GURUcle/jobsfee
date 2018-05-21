@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Material from '../Material';
+import Material from '../MaterialView';
+import { Bubbles } from 'react-native-loader';
 import { Button, ThemeProvider} from 'react-native-material-ui';
 import {
     View,
@@ -13,20 +14,32 @@ import {
     }
     login() {
         this.props.navigation.navigate({
-          routeName : global.auth ? 'Login' : 'Main' ,
+          routeName : 'Login',
+          params : {}
+        });
+    }
+    main() {
+        this.props.navigation.navigate({
+          routeName : 'Main' ,
           params : {}
         });
     }
     componentWillMount() {
-      setTimeout(() => {
-        this.login();
-      }, 5000);
+      // Listen for authentication state to change.
+      global.firebase.auth().onAuthStateChanged((user) => {
+        if (user != null) {
+          this.main();
+        }else{
+          this.login();
+        }
+      });
     }
     render() {
       return <Material>
         <View style = { global.styles.MainContainer }>
-          <Text style = { global.styles.textStyle }>Splah Screen</Text>             
-          <Text style = { global.styles.SmallTextStyle }>Wait 5s ...</Text>             
+          <View style={global.styles.Center}>
+            <Bubbles size={10} color="#1CAFF6"/>
+          </View>      
         </View>
       </Material>
     }

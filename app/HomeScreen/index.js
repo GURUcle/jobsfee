@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { TabRouter } from 'react-navigation';
 import { View, Text, StyleSheet } from 'react-native';
 import { Toolbar, BottomNavigation } from 'react-native-material-ui';
-import Material from '../Material';
-import FontLoader from '../FontLoader';
+import Material from '../MaterialView';
 import JobListTab from '../JobListTab';
 import MessagesTab from '../MessagesTab';
 import OffersTab from '../OffersTab';
@@ -45,7 +44,7 @@ class HomeTab extends Component {
   
     render() {
       const Component = TabRoute.getComponentForRouteName(this.state.active);
-      return <Component/>;
+      return <Component screenProps={{rootNavigation: this.props.screenProps.rootNavigation}}/>;
     }
   }
   
@@ -54,13 +53,13 @@ class HomeTab extends Component {
     constructor(props) {
         super(props);
         this.state = { active: initView };
+        console.log(this.props.navigation)
     }
     componentWillUpdate
     render() {
       return <Material>
-        <FontLoader>
           <View style={styles.container}>
-              <HomeTab value={this.state} key={this.state} />
+              <HomeTab value={this.state} key={this.state} screenProps={{rootNavigation: this.props.navigation}} />
               <BottomNavigation active={this.state.active} >
                   <BottomNavigation.Action
                       key="view-list"
@@ -88,7 +87,6 @@ class HomeTab extends Component {
                   />
               </BottomNavigation>
           </View>
-        </FontLoader>
       </Material>;
     }
 };

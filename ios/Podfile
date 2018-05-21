@@ -7,6 +7,8 @@ target 'jobsfee' do
   # use_frameworks!
   pod 'Firebase/Core', '~> 4.13.0'
 
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
   target 'jobsfeeTests' do
     inherit! :search_paths
     # Pods for testing

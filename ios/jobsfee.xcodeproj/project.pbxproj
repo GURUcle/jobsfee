@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -56,6 +55,18 @@
 		C712CFB320ADC618008161D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C712CFB220ADC618008161D5 /* GoogleService-Info.plist */; };
 		D70D3358C93F8D02B3BCA17E /* libPods-jobsfeeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AF4CB716B7DCC5E3541877 /* libPods-jobsfeeTests.a */; };
 		D97A7D3EFFDA4C8C862329F2 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 463DED571929402A84EDD462 /* Entypo.ttf */; };
+		088D9908497A426F960CC8F0 /* libRNPhotoView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96AEAF747837491BBC587275 /* libRNPhotoView.a */; };
+		6FA6453F8F8E44C4811F81D7 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 56C6A5F88695473DAAF61707 /* rubicon-icon-font.ttf */; };
+		F62FAD35DBA845769DBA74C4 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E16F1349F52948A1869146EE /* Rubik-Black.ttf */; };
+		58902CCB208548C1A8062EC4 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EECAF569E136452193764701 /* Rubik-BlackItalic.ttf */; };
+		C2328451A83C4A588D7AEC47 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A6A20781FD74934979FF0BD /* Rubik-Bold.ttf */; };
+		79D99EB4D8FC4840B7A6176B /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 767C63CDCCB949E797240248 /* Rubik-BoldItalic.ttf */; };
+		0CE7ACFEBBF84782A888CA58 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8BBB1A78ECEA44DD8D84A01B /* Rubik-Italic.ttf */; };
+		56C58B1948294A338C51119A /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D68B39A9BDE4E31A7A29FA3 /* Rubik-Light.ttf */; };
+		C17DD10516314354BCCBF294 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0E7B934969B417294C66340 /* Rubik-LightItalic.ttf */; };
+		FBBE19B52AD64D3FB19DE7CD /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77387CFBD9234D738BFDDE7B /* Rubik-Medium.ttf */; };
+		115350FC107047C7A48A2401 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1BE5CE3E3A543EB8F4CC686 /* Rubik-MediumItalic.ttf */; };
+		45D7E527FCBC4DB0B5EA6CF3 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FDDB75831D774120B55C03C2 /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -403,6 +414,19 @@
 		E8E981D96D5F4BF19475D2D8 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		EE994E24C0D7A4E590204942 /* Pods-jobsfee-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jobsfee-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-jobsfee-tvOSTests/Pods-jobsfee-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F38F63940B734BEA9BD0E0A5 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		59EE3C9EF1DF446F9A7143F2 /* RNPhotoView.xcodeproj */ = {isa = PBXFileReference; name = "RNPhotoView.xcodeproj"; path = "../node_modules/react-native-photo-view/ios/RNPhotoView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		96AEAF747837491BBC587275 /* libRNPhotoView.a */ = {isa = PBXFileReference; name = "libRNPhotoView.a"; path = "libRNPhotoView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		56C6A5F88695473DAAF61707 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/@shoutem/ui/fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E16F1349F52948A1869146EE /* Rubik-Black.ttf */ = {isa = PBXFileReference; name = "Rubik-Black.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EECAF569E136452193764701 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-BlackItalic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6A6A20781FD74934979FF0BD /* Rubik-Bold.ttf */ = {isa = PBXFileReference; name = "Rubik-Bold.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		767C63CDCCB949E797240248 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-BoldItalic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8BBB1A78ECEA44DD8D84A01B /* Rubik-Italic.ttf */ = {isa = PBXFileReference; name = "Rubik-Italic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8D68B39A9BDE4E31A7A29FA3 /* Rubik-Light.ttf */ = {isa = PBXFileReference; name = "Rubik-Light.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A0E7B934969B417294C66340 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-LightItalic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		77387CFBD9234D738BFDDE7B /* Rubik-Medium.ttf */ = {isa = PBXFileReference; name = "Rubik-Medium.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A1BE5CE3E3A543EB8F4CC686 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-MediumItalic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FDDB75831D774120B55C03C2 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; name = "Rubik-Regular.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -435,6 +459,7 @@
 				7041B9A0C5084D41BDAFD487 /* libRNVectorIcons.a in Frameworks */,
 				4E74F875E63F420BA7AEF898 /* libRNFirebase.a in Frameworks */,
 				3450F4534678EDAA15086996 /* libPods-jobsfee.a in Frameworks */,
+				088D9908497A426F960CC8F0 /* libRNPhotoView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,6 +669,7 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				4CE2ED3C6C3949D9846CD5E0 /* RNVectorIcons.xcodeproj */,
 				5641C36CB4CD4782A8711AD2 /* RNFirebase.xcodeproj */,
+				59EE3C9EF1DF446F9A7143F2 /* RNPhotoView.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -700,6 +726,17 @@
 				BE8B61758D1B4F71BAC62B4E /* Octicons.ttf */,
 				5D8B8B79BD244765A5B57FB4 /* SimpleLineIcons.ttf */,
 				09E90520852049B49BDBF029 /* Zocial.ttf */,
+				56C6A5F88695473DAAF61707 /* rubicon-icon-font.ttf */,
+				E16F1349F52948A1869146EE /* Rubik-Black.ttf */,
+				EECAF569E136452193764701 /* Rubik-BlackItalic.ttf */,
+				6A6A20781FD74934979FF0BD /* Rubik-Bold.ttf */,
+				767C63CDCCB949E797240248 /* Rubik-BoldItalic.ttf */,
+				8BBB1A78ECEA44DD8D84A01B /* Rubik-Italic.ttf */,
+				8D68B39A9BDE4E31A7A29FA3 /* Rubik-Light.ttf */,
+				A0E7B934969B417294C66340 /* Rubik-LightItalic.ttf */,
+				77387CFBD9234D738BFDDE7B /* Rubik-Medium.ttf */,
+				A1BE5CE3E3A543EB8F4CC686 /* Rubik-MediumItalic.ttf */,
+				FDDB75831D774120B55C03C2 /* Rubik-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1230,6 +1267,17 @@
 				0B2CC12914C846668F9563D2 /* SimpleLineIcons.ttf in Resources */,
 				544F45749F5C4F3AB0C68D84 /* Zocial.ttf in Resources */,
 				C712CFB320ADC618008161D5 /* GoogleService-Info.plist in Resources */,
+				6FA6453F8F8E44C4811F81D7 /* rubicon-icon-font.ttf in Resources */,
+				F62FAD35DBA845769DBA74C4 /* Rubik-Black.ttf in Resources */,
+				58902CCB208548C1A8062EC4 /* Rubik-BlackItalic.ttf in Resources */,
+				C2328451A83C4A588D7AEC47 /* Rubik-Bold.ttf in Resources */,
+				79D99EB4D8FC4840B7A6176B /* Rubik-BoldItalic.ttf in Resources */,
+				0CE7ACFEBBF84782A888CA58 /* Rubik-Italic.ttf in Resources */,
+				56C58B1948294A338C51119A /* Rubik-Light.ttf in Resources */,
+				C17DD10516314354BCCBF294 /* Rubik-LightItalic.ttf in Resources */,
+				FBBE19B52AD64D3FB19DE7CD /* Rubik-Medium.ttf in Resources */,
+				115350FC107047C7A48A2401 /* Rubik-MediumItalic.ttf in Resources */,
+				45D7E527FCBC4DB0B5EA6CF3 /* Rubik-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1549,12 +1597,14 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = jobsfeeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1577,12 +1627,14 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = jobsfeeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1606,6 +1658,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = jobsfee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1629,6 +1682,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = jobsfee/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1659,11 +1713,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = "jobsfee-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1696,11 +1752,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = "jobsfee-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1732,11 +1790,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = "jobsfee-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1768,11 +1828,13 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
 					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
+					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 				);
 				INFOPLIST_FILE = "jobsfee-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

@@ -1,7 +1,20 @@
+require('./data');
 import React from 'react';
 import {COLOR} from 'react-native-material-ui';
 import {StyleSheet} from 'react-native';
 import { createSwitchNavigator,NavigationActions } from 'react-navigation';
+import firebase from 'firebase';
+
+firebase.initializeApp({
+  apiKey: "AIzaSyDAHJcDm-xI0GiNg71CH50BlBnip8SuSz0",
+  authDomain: "jobfee-e27d5.firebaseapp.com",
+  databaseURL: "https://jobfee-e27d5.firebaseio.com",
+  projectId: "jobfee-e27d5",
+  storageBucket: "jobfee-e27d5.appspot.com",
+  messagingSenderId: "169510976247"
+});
+global.firebase = firebase;
+
 
 global.auth = true; 
 global.uiTheme = {
@@ -12,11 +25,26 @@ global.uiTheme = {
 };
 global.styles = StyleSheet.create(
   {
+    ScrollContainer : {
+      flex:1,
+      margin: 10
+    },
    MainContainer: {
       justifyContent: 'center',
       flex:1,
       margin: 10
-    
+   },
+   TabContainer: {
+      flex:1,
+      margin: 0
+   },
+   ViewContainer: {
+      justifyContent: 'center',
+      flex:1,
+      margin: 0
+   },
+   Center : {
+    alignItems: 'center',
    },
    TextInputStyleClass: {
  
@@ -46,12 +74,12 @@ import Splash from "./SplashScreen";
 import Login from "./LoginScreen";
 import Register from "./RegisterScreen";
 
-
+global.AppStack = AppStack;
 const TopLevelNav = createSwitchNavigator({
   Splash: { screen: Splash },
   Login: { screen: Login },
   Register: { screen: Register },
-  Main: { screen: AppStack },
+  Main: { screen: global.AppStack },
 }, {
   initialRouteName: 'Splash',
   headerMode: 'none',
