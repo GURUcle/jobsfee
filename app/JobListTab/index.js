@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import Material from '../MaterialView';
 import { Pulse } from 'react-native-loader';
-import { Button, ThemeProvider, ActionButton, Toolbar } from 'react-native-material-ui';
+import { ThemeProvider, ActionButton, Toolbar } from 'react-native-material-ui';
+import {
+  ListView,
+  Caption,
+  Button,
+  Card,
+  Subtitle,
+  Icon,
+  Image,
+  TouchableOpacity,
+  ImageBackground,
+  Divider,
+  Tile,
+  Title
+} from '@shoutem/ui';
 import {
     View,
     Text,
@@ -52,6 +66,20 @@ export default class  extends Component {
   addShoppingCart(){
 
   }
+  renderPost(post){
+    return <TouchableOpacity>
+    <ImageBackground
+      styleName="large-banner"
+      source={{ uri: "https://shoutem.github.io/static/getting-started/restaurant-1.jpg" }}
+    >
+      <Tile>
+        <Title styleName="md-gutter-bottom">{post.title}</Title>
+        <Subtitle styleName="sm-gutter-horizontal">{post.description}</Subtitle>
+      </Tile>
+    </ImageBackground>
+    <Divider styleName="line" />
+  </TouchableOpacity>
+  }
   render() {
     return <Material>
       <NavBar
@@ -68,19 +96,10 @@ export default class  extends Component {
         <ScrollView>
           {
             this.state.posts.length > 0 && 
-            this.state.posts.map(post=>(
-              <View style={{
-                borderColor: 'red',
-                borderWidth:2,
-                paddingVertical: 5,
-                marginVertical: 5
-              }} key={post.uuid}>
-                <Text style = { global.styles.textStyle }> {post.type}/{post.title} </Text>
-                <Text style={{
-                  textAlign: 'center',
-                }}> {post.description} </Text>
-              </View>
-            ))
+            <ListView
+              data={this.state.posts}
+              renderRow={this.renderPost}
+            />
           }
           {
             this.state.posts.length == 0 &&
