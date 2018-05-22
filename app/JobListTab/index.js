@@ -44,23 +44,26 @@ export default class  extends Component {
         hidden : true,
         posts : []
       }
-      var posts = global.firebase.database().ref('posts');
-      posts.orderByChild('created').startAt().limitToLast(100).once('value',(snapshot)=> {
-        this.setState({loading:false,posts : Object.values(snapshot.val() || []).reverse()});
-        console.log('posts-database',Object.values(snapshot.val() || []).reverse())
-      });
-      posts.on('child_added',(snapshot)=> {
-        var val = snapshot.val();
-        this.setState({posts : [val,...this.state.posts]});
-        console.log('posts',snapshot.val())
-      });
       
   }
-
-  addToPhotos(){
-
+  async componentWillMount() {
+    this.posts = global.firebase.database().ref('posts');
+    this.posts.orderByChild('created').startAt().limitToLast(100).once('value',(snapshot)=> {
+      this.setState({loading:false,posts : Object.values(snapshot.val() || []).reverse()});
+      console.log('posts-database',Object.values(snapshot.val() || []).reverse())
+    });
+    this.posts.on('child_added',(snapshot)=> {
+      var val = snapshot.val();
+      this.setState({posts : [val,...this.state.posts]});
+      console.log('posts',snapshot.val())
+    });
   }
-  addAlert(){
+  async componentWillUnmount() {
+    this.posts.off()
+  }  
+  addToPhotos(){
+  }
+  addJob(){
     this.props.screenProps.rootNavigation.navigate('NewJob');
   }
   addShoppingCart(){
@@ -110,20 +113,8 @@ export default class  extends Component {
       </View>
 
       <ActionButton
-        actions={[
-            { icon: 'add-alert', label: 'New Job' },
-            { icon: 'add-shopping-cart', label: 'New Sell' },
-            { icon: 'add-to-photos', label: 'New Ads' }
-        ]}
-        hidden={this.state.bottomHidden}
+        onPress={()=>{this.addJob()}} 
         icon="add"
-        transition="speedDial"
-        onPress={(action,d) => {
-          action = toCamelCase(action);
-          if(this[action]){
-            this[action]();
-          }
-        }}
         style={{
             positionContainer: { bottom: 76 },
         }}
