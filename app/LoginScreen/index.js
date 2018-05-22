@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, NativeModules } from 'react';
 import Material from '../MaterialView';
 import NavBar from '../NavBar';
 import { Button } from 'react-native-material-ui';
@@ -9,8 +9,8 @@ import {
     StyleSheet,
     Alert,
     TextInput
-  } from 'react-native';
-  export default class  extends Component {
+} from 'react-native';
+export default class  extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,7 +30,7 @@ import {
             
             var errorCode = error.code;
             var errorMessage = error.message;
-            console.log(errorCode,errorMessage)
+            //console.log(errorCode,errorMessage)
             // [START_EXCLUDE]
             if (errorCode === 'auth/wrong-password') {
                 this.setState({loading : false,errorMessage: 'Wrong password.'});
@@ -40,27 +40,27 @@ import {
                 this.setState({loading : false,errorMessage: errorMessage});
             }
             // [END_EXCLUDE]
-          }).then(user=>{
-              console.log(user)
+            }).then(user=>{
+                //console.log(user)
             if(user){
                 this.props.navigation.navigate('Main');
             }
-          });
-          // [END authwithemail]
+            });
+            // [END authwithemail]
 
     }
     register() {        
         this.props.navigation.navigate('Register');
     }
     render() {
-      return <Material>
-          <NavBar
+        return <Material>
+            <NavBar
                 title="Sign In"
                 image={require('../../Images/image-2.png')}
-              />
+                />
             
                 { this.state.loading && 
-                   <View style={global.styles.MainContainer}>                
+                    <View style={global.styles.MainContainer}>                
                         <View style={global.styles.Center}>
                             <Bubbles size={10} color="#1CAFF6"/>
                         </View>
@@ -99,4 +99,4 @@ import {
                 }
         </Material>
     }
-  }
+}

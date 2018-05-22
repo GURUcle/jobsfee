@@ -18,11 +18,12 @@ export default class AppFontLoader extends Component {
                 'Rubik-Regular' : RubikRegular,
                 'rubicon-icon-font':RubiconIconFont,
                 MaterialIcons,
-                Roboto
+                Roboto,
+                'Arial' : Roboto
             });
             this.setState({ fontLoaded: true });
         } catch (error) {
-            console.log('error loading icon fonts', error);
+            console.error('error loading icon fonts', error);
         }
     }
     render() {

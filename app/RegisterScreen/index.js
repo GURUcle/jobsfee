@@ -27,8 +27,7 @@ import {
         }
     }
     register() {
-            
-      console.log(this.state.UserEmail, this.state.UserPassword);
+      //console.log(this.state.UserEmail, this.state.UserPassword);
       if(!this.state.UserEmail)
         return this.setState({errorMessage: "Email can not be empty"});
       if(!this.state.UserPassword)

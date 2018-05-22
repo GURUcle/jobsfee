@@ -53,7 +53,7 @@ class HomeTab extends Component {
     constructor(props) {
         super(props);
         this.state = { active: initView };
-        console.log(this.props.navigation)
+        //console.log(this.props.navigation)
     }
     componentWillUpdate
     render() {

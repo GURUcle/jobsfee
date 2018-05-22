@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Material from '../MaterialView';
+import { Pulse } from 'react-native-loader';
 import { Button, ThemeProvider, ActionButton, Toolbar } from 'react-native-material-ui';
 import {
     View,
@@ -25,9 +26,21 @@ export default class  extends Component {
   constructor(props) {
       super(props)    
       this.state = {
-        active : 'today',
-        hidden : true
-      }    
+        loading : true,
+        hidden : true,
+        posts : []
+      }
+      var posts = global.firebase.database().ref('posts');
+      posts.orderByChild('created').startAt().limitToLast(100).once('value',(snapshot)=> {
+        this.setState({loading:false,posts : Object.values(snapshot.val() || []).reverse()});
+        console.log('posts-database',Object.values(snapshot.val() || []).reverse())
+      });
+      posts.on('child_added',(snapshot)=> {
+        var val = snapshot.val();
+        this.setState({posts : [val,...this.state.posts]});
+        console.log('posts',snapshot.val())
+      });
+      
   }
 
   addToPhotos(){
@@ -46,7 +59,35 @@ export default class  extends Component {
         image={require('../../Images/image-2.png')}
       />
       <View style = { global.styles.MainContainer }>
-        <Text style = { global.styles.textStyle }> Job Tab Screen </Text>
+        { this.state.loading &&
+          <View style={global.styles.Center}>
+            <Pulse size={10} color="#1CAFF6"/>
+          </View>      
+        }
+        { !this.state.loading &&
+        <ScrollView>
+          {
+            this.state.posts.length > 0 && 
+            this.state.posts.map(post=>(
+              <View style={{
+                borderColor: 'red',
+                borderWidth:2,
+                paddingVertical: 5,
+                marginVertical: 5
+              }} key={post.uuid}>
+                <Text style = { global.styles.textStyle }> {post.type}/{post.title} </Text>
+                <Text style={{
+                  textAlign: 'center',
+                }}> {post.description} </Text>
+              </View>
+            ))
+          }
+          {
+            this.state.posts.length == 0 &&
+            <Text style = { global.styles.textStyle }> No posts </Text>
+          }
+        </ScrollView>
+        }
       </View>
 
       <ActionButton

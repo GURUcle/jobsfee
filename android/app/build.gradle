@@ -75,6 +75,10 @@ import com.android.build.OutputFile
 project.ext.react = [
     entryFile: "index.js"
 ]
+project.afterEvaluate {
+    apply from: '../../node_modules/react-native-zss-rich-text-editor/htmlCopy.gradle';
+    copyEditorHtmlToAppAssets(file('../../node_modules/react-native-zss-rich-text-editor'))
+}
 
 apply from: "../../node_modules/react-native/react.gradle"
 
@@ -137,6 +141,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-webview-bridge')
     compile project(':react-native-photo-view')
     compile project(':react-native-linear-gradient')
     compile(project(':react-native-firebase')) {

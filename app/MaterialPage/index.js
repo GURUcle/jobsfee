@@ -35,11 +35,9 @@ class MaterialPage extends Component {
             image = {this.props.image}
             component = {this.props.menuComponent}
           />
-          <ScrollView style = { global.styles.ScrollContainer }>
-            <View >
+            <View style = { global.styles.ScrollContainer }>
               {this.props.children}
             </View>
-          </ScrollView>
         </View>
       </FontLoader>
     </ThemeProvider>)
