@@ -77,7 +77,23 @@ export default class  extends Component {
     
     if(!this.state.title)
     return this.setState({errorMessage: "title can not be empty"});
+    if(!this.state.job)
+    return this.setState({errorMessage: "job can not be empty"});
+  
+    if(!this.state.jobType)
+    return this.setState({errorMessage: "jobType can not be empty"});
 
+    if(!this.state.description)
+    return this.setState({errorMessage: "description can not be empty"});
+
+  
+    if(!this.state.salary)
+    return this.setState({errorMessage: "salary can not be empty"});
+    
+    if(!this.state.type)
+    return this.setState({errorMessage: "type can not be empty"});
+
+    
     global.firebase.database().ref().update(updates).then(ok=>{
       Alert.alert(
         'Information',
