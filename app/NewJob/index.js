@@ -74,7 +74,10 @@ export default class  extends Component {
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
     updates['/posts/' + newPostKey] = this.state;
-  
+    
+    if(!this.state.title)
+    return this.setState({errorMessage: "title can not be empty"});
+
     global.firebase.database().ref().update(updates).then(ok=>{
       Alert.alert(
         'Information',
