@@ -64,7 +64,7 @@ export default class  extends Component {
         jobType : '',
         salary : '',
         created: global.firebase.database.ServerValue.TIMESTAMP,
-        type : 'jobs'
+        type : '',
       };
   }
    writeNewJob() {

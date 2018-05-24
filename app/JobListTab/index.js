@@ -76,8 +76,12 @@ export default class  extends Component {
       source={{ uri: "https://shoutem.github.io/static/getting-started/restaurant-1.jpg" }}
     >
       <Tile>
-        <Title styleName="md-gutter-bottom">{post.title}</Title>
-        <Subtitle styleName="sm-gutter-horizontal">{post.description}</Subtitle>
+        <Title styleName="md-gutter-bottom">{'Job Title: ' + post.title}</Title>
+        <Subtitle styleName="sm-gutter-horizontal">{'Description: ' + post.description}</Subtitle>
+        <View style={styles.listItem}>
+                <Text style={styles.liText}>{'N$' + post.salary}</Text>
+
+            </View>
       </Tile>
     </ImageBackground>
     <Divider styleName="line" />
