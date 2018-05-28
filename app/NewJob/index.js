@@ -64,7 +64,7 @@ export default class  extends Component {
         jobType : '',
         salary : '',
         created: global.firebase.database.ServerValue.TIMESTAMP,
-        type : 'jobs'
+        type : '',
       };
   }
    writeNewJob() {
@@ -74,7 +74,26 @@ export default class  extends Component {
     // Write the new post's data simultaneously in the posts list and the user's post list.
     var updates = {};
     updates['/posts/' + newPostKey] = this.state;
+    
+    if(!this.state.title)
+    return this.setState({errorMessage: "title can not be empty"});
+    if(!this.state.job)
+    return this.setState({errorMessage: "job can not be empty"});
   
+    if(!this.state.jobType)
+    return this.setState({errorMessage: "jobType can not be empty"});
+
+    if(!this.state.description)
+    return this.setState({errorMessage: "description can not be empty"});
+
+  
+    if(!this.state.salary)
+    return this.setState({errorMessage: "salary can not be empty"});
+    
+    if(!this.state.type)
+    return this.setState({errorMessage: "type can not be empty"});
+
+    
     global.firebase.database().ref().update(updates).then(ok=>{
       Alert.alert(
         'Information',

@@ -3,6 +3,7 @@ import Material from '../MaterialView';
 import { Pulse } from 'react-native-loader';
 import { ThemeProvider, ActionButton, Toolbar } from 'react-native-material-ui';
 import {
+  Overlay,
   ListView,
   Caption,
   Button,
@@ -63,6 +64,14 @@ export default class  extends Component {
       }
       
   }
+  state = { user: null }
+
+
+  componentDidMount() {
+    const { user } = firebase.auth()
+    this.setState({ user })
+}
+
   async componentWillMount() {
     this.posts = global.firebase.database().ref('posts');
     this.posts.orderByChild('created').startAt().limitToLast(100).once('value',(snapshot)=> {
@@ -75,6 +84,10 @@ export default class  extends Component {
       console.log('posts',snapshot.val())
     });
   }
+
+
+
+
   async componentWillUnmount() {
     this.posts.off()
   }  
@@ -96,8 +109,19 @@ export default class  extends Component {
       source={{ uri: "https://shoutem.github.io/static/getting-started/restaurant-1.jpg" }}
     >
       <Tile>
-        <Title styleName="md-gutter-bottom">{post.title}</Title>
-        <Subtitle styleName="sm-gutter-horizontal">{post.description}</Subtitle>
+        <Title styleName="md-gutter-bottom">{'Job Title: ' + post.title}</Title>
+       
+        <Overlay styleName="solid-dark">
+       
+        <Subtitle styleName="sm-gutter-horizontal">{'Description: ' + post.description}</Subtitle>
+        {/* <View style={styles.listItem}>
+                <Text style={styles.liText}>{'N$' + post.salary}</Text>
+               
+            </View> */}
+
+            
+          <Subtitle styleName="sm-gutter-horizontal">{'N$' + post.salary}</Subtitle>
+           </Overlay>
       </Tile>
     </ImageBackground>
     <Divider styleName="line" />
