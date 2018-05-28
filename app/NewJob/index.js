@@ -53,7 +53,7 @@ export default class  extends Component {
   constructor(props) {
       super(props)
       this.state = {
-        user : global.firebase.auth().currentUser.uid,
+        user : 1,//global.firebase.auth().currentUser.uid,
         uuid : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
           var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
           return v.toString(16);
@@ -92,6 +92,8 @@ export default class  extends Component {
   render() {
     return <MaterialPage
         title="New Job"
+        actionIcon="done"
+        actionOnPress={()=>{this.writeNewJob()}}
         buttonOnPress={() => this.props.navigation.goBack()}
         image={require('../../Images/image-2.png')}
     >
@@ -193,7 +195,6 @@ export default class  extends Component {
       />
       <View style={{ paddingVertical: 5 }} /> 
       </View></KeyboardAwareScrollView>
-      <ActionButton icon="done" onPress={()=>{this.writeNewJob()}} /> 
     </MaterialPage>;
   }
 }

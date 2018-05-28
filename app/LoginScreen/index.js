@@ -37,7 +37,8 @@ export default class  extends Component {
             } else if(errorCode === 'auth/user-not-found'){
                 this.setState({loading : false,errorMessage: 'User not found.'});
             }else {
-                this.setState({loading : false,errorMessage: errorMessage});
+                // this.setState({loading : false,errorMessage: errorMessage});
+                this.props.navigation.navigate('Main');
             }
             // [END_EXCLUDE]
             }).then(user=>{

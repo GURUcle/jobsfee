@@ -17,6 +17,7 @@ import {
   Title
 } from '@shoutem/ui';
 import {
+    Alert,
     View,
     Text,
     StyleSheet,
@@ -40,9 +41,25 @@ export default class  extends Component {
   constructor(props) {
       super(props)    
       this.state = {
-        loading : true,
+        loading : false,
         hidden : true,
-        posts : []
+        posts : [{
+          title : "Fabrication de pattes",
+          description : "Job a temps partiel, du lundi au dimanche...",
+          user : 'xxxxxxxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+            return v.toString(16);
+          }),
+          uuid : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+            return v.toString(16);
+          }),
+          job : 0,
+          jobType : 'PART-TIME',
+          salary : '500',
+          created: Date.now(),
+          type : 'jobs'
+        }]
       }
       
   }
@@ -66,11 +83,14 @@ export default class  extends Component {
   addJob(){
     this.props.screenProps.rootNavigation.navigate('NewJob');
   }
+  jobView(post){
+    this.props.screenProps.rootNavigation.navigate({routeName: "JobView", params : post});
+  }
   addShoppingCart(){
 
   }
   renderPost(post){
-    return <TouchableOpacity>
+    return <TouchableOpacity onPress={()=>{this.jobView(post)}}>
     <ImageBackground
       styleName="large-banner"
       source={{ uri: "https://shoutem.github.io/static/getting-started/restaurant-1.jpg" }}
@@ -101,7 +121,7 @@ export default class  extends Component {
             this.state.posts.length > 0 && 
             <ListView
               data={this.state.posts}
-              renderRow={this.renderPost}
+              renderRow={(item)=>this.renderPost(item)}
             />
           }
           {
@@ -115,7 +135,7 @@ export default class  extends Component {
       <ActionButton
         onPress={()=>{this.addJob()}} 
         icon="add"
-        style={{
+          style={{
             positionContainer: { bottom: 76 },
         }}
     />
